@@ -1,0 +1,24 @@
+{
+	"$schema": "https://raw.githubusercontent.com/ametyx/rune/refs/heads/main/misc/rune.0.4.x.json",
+	"configs": {
+		"target": "void",
+		"output": "bin/{profile}/{config}/{arch}",
+		"profile": "void-core_debug",
+		"test_profile": "",
+		"test_output": ""
+	},
+	"profiles": [
+		{
+			"name": "void-core_debug",
+			"arch": "darwin_arm64",
+			"entry": "src/void",
+			"build_mode": "dll",
+			"build_flags": [
+				"-vet"
+			]
+		}
+	],
+	"scripts": {
+		"clean": "py ./scripts/clean.py"
+	}
+}
